@@ -62,6 +62,8 @@ var googleMap = '<div id="map"></div>';
 var HTMLFootermobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
 var HTMLFooteremail = '<li class="flex-item"><span class="orange-text">email</span><span class="white-text">%data%</span></li>';
 var HTMLFootergithub = '<li class="flex-item"><span class="orange-text">github</span><span class="white-text">%data%</span></li>';
+var HTMLFooterLocation = '<li class="flex-item"><span class="orange-text">location</span><span class="white-text">%data%</span></li>';
+
 
 
 

@@ -7,32 +7,32 @@ var bio = {
 	"role": "Front-end developer", 
 	"contacts": {
 		"email": "harvey.magana@gmail.com", 
-		"phone": "415-632-7997", 
+		"mobile": "415-632-7997", 
 		"github": "heyharv", 
 		"location": "Vallejo"
 	}, 
-	"picture": "images/fry.jpg", 
-	"welcome": "Hi there! My name is Harvey, an enthusiastic front-end developer who wants to help you out!",
+	"biopic": "images/fry.jpg", 
+	"welcomeMessage": "Hi there! My name is Harvey, an enthusiastic front-end developer who wants to help you out!",
 	"skills": ["skill1", "skill2", "skill3", "skill4"], 
-	"displayBio": function() {
+	"display": function() {
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.phone);
+		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email); 
 		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-		var formattedBioPic = HTMLbioPic.replace("%data%", bio.picture);
-		var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcome);
-		var formattedSkills = HTMLskills.replace("%data%", bio.skills);
+		var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+		var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 		var formattedFooterPhone = HTMLFootermobile.replace("%data%", bio.contacts.phone);
 		var formattedFooterEmail = HTMLFooteremail.replace("%data%", bio.contacts.email);
 		var formattedFooterGithub = HTMLFootergithub.replace("%data%", bio.contacts.github);
+		var formattedFooterLocation = HTMLFooterLocation.replace("%data%", bio.contacts.location);
 
 		$("#header").prepend(formattedName + formattedRole);
 		$("#topContacts").prepend(formattedMobile + formattedEmail + formattedGithub + formattedLocation);
 		$("#header").append(formattedBioPic);
 		$("#header").append(formattedWelcome);
-		$("#footerContacts").append(formattedFooterPhone + formattedFooterEmail + formattedFooterGithub);
+		$("#footerContacts").append(formattedFooterPhone + formattedFooterEmail + formattedFooterGithub + formattedFooterLocation);
 
 		if(bio.skills){
 			$("#header").append(HTMLskillsStart);
@@ -68,7 +68,7 @@ var work = {
 			"description": "Creating websites for clients"
 		}
 	], 
-	"displayWork": function() {
+	"display": function() {
 		for(var e = 0; e < work.jobs.length; e++) {
 			$("#workExperience").append(HTMLworkStart);
 			var formattedWork = HTMLworkEmployer.replace("%data%", work.jobs[e].employer);
@@ -92,14 +92,14 @@ var education = {
 			"dates": "Jan. 2005 - Dec. 2007", 
 			"location": "Long Beach, CA", 
 			"degree": "B.S Business Administration",
-			"major": "International Business"
+			"majors": ["International Business"]
 		}, 
 		{
 			"name": "Bay Area Video Coalition", 
 			"dates": "Jun. - Aug. 2012", 
 			"location": "San Francisco, CA", 
-			"degree": "Web Design",
-			"major": "Web Design"
+			"degree": "Web Design certification",
+			"majors": "Web Design"
 		}, 
 	], 
 	"onlineCourses": [   
@@ -107,22 +107,22 @@ var education = {
 			"title": "JavaScript Basics", 
 			"school": "Udacity", 
 			"dates": "2016", 
-			"url": "www.udacity.com", 
+			"url": "http://www.udacity.com", 
 		}
 	],
-	"displayEducation": function() {
+	"display": function() {
 	      for(var edu = 0; edu < education.schools.length; edu++) {
 	      	$("#education").append(HTMLschoolStart);
 			var formattedSchoolName = HTMLschoolName.replace("%data%", education.schools[edu].name);
 			var formattedSchoolDegree = HTMLschoolDegree.replace("%data%", education.schools[edu].degree);
 			var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[edu].dates);
 			var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[edu].location);
-			//var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[edu].major);
-			//$(".education-entry:last").prepend(formattedSchoolMajor);
-			$(".education-entry:last").prepend(formattedSchoolDates);
-			$(".education-entry:last").prepend(formattedSchoolLocation);
-			$(".education-entry:last").prepend(formattedSchoolDegree);
-			$(".education-entry:last").prepend(formattedSchoolName);
+			var formattedSchoolMajor = HTMLschoolMajor.replace("%data%", education.schools[edu].majors);
+			var formattedNameDegree = formattedSchoolName + formattedSchoolDegree;
+			$(".education-entry:last").append(formattedNameDegree);
+			$(".education-entry:last").append(formattedSchoolDates);
+			$(".education-entry:last").append(formattedSchoolMajor);
+			$(".education-entry:last").append(formattedSchoolLocation);
 	      }
 	    $("#education").append(HTMLonlineClasses);
 	    for(onlineCourse = 0; onlineCourse < education.onlineCourses.length; onlineCourse++) {
@@ -145,22 +145,22 @@ var projects = {
 			"title": "first project", 
 			"dates": "Jan - 2015", 
 			"description": "Project that was the first one...", 
-			"images": "images/blueSquare.png"
+			"images": ["images/blueSquare.png"]
 		}, 
 		{
 			"title": "second project", 
 			"dates": "Jan - 2015", 
 			"description": "Project that was the second one...", 
-			"images": "images/yellowSquare.png"
+			"images": ["images/yellowSquare.png"]
 		}, 
 		{
 			"title": "third project", 
 			"dates": "Jan - 2015", 
 			"description": "Project that was the third one...", 
-			"images": "images/purpleSquare.png"
+			"images": ["images/purpleSquare.png"]
 		}
 	], 
-	"displayProjects": function() {
+	"display": function() {
 		for(proj = 0; proj < projects.projects.length; proj++) {
 			$("#projects").append(HTMLprojectStart);
 			var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[proj].title);
@@ -177,10 +177,10 @@ var projects = {
 
 //$("#main").append(internationalizeButton);
 $("#mapDiv").append(googleMap);
-bio.displayBio();
-work.displayWork();
-education.displayEducation();
-projects.displayProjects();
+bio.display();
+work.display();
+education.display();
+projects.display();
 
 
 /* this is for the internationalization button, I don't need it, it will work if uncommented...
