@@ -1,6 +1,12 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
+var model = {
+	bio: {},
+	work: {"jobs": []}, 
+	education: {"schools": []}, 
+	projects: {"projects": []}
+}
 
 var bio = {
 	"name": "Harvey Magana", 
