@@ -2,17 +2,33 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 var model = {
-	bio: {},
+	bio: {
+		name: "Harvey Magana", 
+		role: "Front-end developer", 
+		contacts: {
+			email: "harvey.magana@gmail.com", 
+			mobile: "415-632-7997", 
+			github: "heyharv", 
+			location: "Vallejo"
+		}
+	},
 	work: {"jobs": []}, 
 	education: {"schools": []}, 
 	projects: {"projects": []}
 };
 
 var controller = {
+	init: function() {
+		view.init();
+	},
 	display: function() {
 		//display something...
 	}
 };
+
+var view = {
+
+}
 
 var bio = {
 	"name": "Harvey Magana", 
