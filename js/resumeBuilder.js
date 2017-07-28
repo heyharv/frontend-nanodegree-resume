@@ -6,7 +6,13 @@ var model = {
 	work: {"jobs": []}, 
 	education: {"schools": []}, 
 	projects: {"projects": []}
-}
+};
+
+var controller = {
+	display: function() {
+		//display something...
+	}
+};
 
 var bio = {
 	"name": "Harvey Magana", 
