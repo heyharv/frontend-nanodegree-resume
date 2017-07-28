@@ -10,7 +10,10 @@ var model = {
 			mobile: "415-632-7997", 
 			github: "heyharv", 
 			location: "Vallejo"
-		}
+		}, 
+		biopic: "images/fry.jpg", 
+		welcomeMessage: "Hi there! My name is Harvey, an enthusiastic front-end developer who wants to help you out!", 
+		skills: ["skill1", "skill2", "skill3", "skill4"]
 	},
 	work: {"jobs": []}, 
 	education: {"schools": []}, 
@@ -22,7 +25,18 @@ var controller = {
 		view.init();
 	},
 	display: function() {
-		//display something...
+		var formattedName = HTMLheaderName.replace("%data%", bio.name);
+		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email); 
+		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+		var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+		var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+		var formattedFooterPhone = HTMLFootermobile.replace("%data%", bio.contacts.phone);
+		var formattedFooterEmail = HTMLFooteremail.replace("%data%", bio.contacts.email);
+		var formattedFooterGithub = HTMLFootergithub.replace("%data%", bio.contacts.github);
+		var formattedFooterLocation = HTMLFooterLocation.replace("%data%", bio.contacts.location);
 	}
 };
 
