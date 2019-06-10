@@ -218,5 +218,31 @@ span {
   .flex-box {
     justify-content: end;
   }
+
+  .role, h2 {
+    font-size: 30px;
+  }
+
+  .orange-text, a {
+    font-size: 25px;
+  }
+
+  .date-text, .location-text, .white-text, p {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #map {
+    display: block;
+    height: 90%;
+    margin: 0 5%;
+  }
+
+  #mapDiv {
+    height: 330px;
+    width: 100%;
+    padding-bottom: 5%;
+  }
 }
 
