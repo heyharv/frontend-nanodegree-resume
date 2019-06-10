@@ -132,6 +132,10 @@ a {
   background-color: #002540;
 }
 
+.footer {
+  background-color: #002540;
+}
+
 .flex-box {
   display: -webkit-flex;
   display: flex;
