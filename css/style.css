@@ -45,11 +45,12 @@ h2, h3, h4, h5 {
 }
 .role {
   color: #0070f7;
+  font-size: 25px
 }
 .date-text {
   font-family: Times, Cambria, sans-serif;
   font-style: italic;
-  font-size: 14px;
+  font-size: 15px;
   color: #989898;
   line-height: 16px;
   float: left;
@@ -57,13 +58,13 @@ h2, h3, h4, h5 {
 .location-text {
   font-family: Times, Cambria, sans-serif;
   font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
   line-height: 16px;
   float: right;
 }
 p {
-  font-size: 14px;
+  font-size: 15px;
   color: #333;
   line-height: 21px;
   font-family: Times, Cambria, sans-serif;
@@ -74,6 +75,7 @@ a {
   margin-top: 10px;
   display: block;
   font-family: Times, Cambria, sans-serif;
+  font-size: 19px;
 }
 .welcome-message {
   font-family: Times, Cambria, sans-serif;
@@ -93,6 +95,7 @@ a {
 .orange-text {
   color: #0070f7;
   font-family: Times, Cambria, sans-serif;
+  font-size: 20px;
 }
 #footerContacts .orange-text {
   color: #fff;
