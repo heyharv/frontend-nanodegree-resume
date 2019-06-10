@@ -1,48 +1,6 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
-var model = {
-	bio: {
-		name: "Harvey Magana", 
-		role: "Front-end developer", 
-		contacts: {
-			email: "harvey.magana@gmail.com", 
-			mobile: "415-632-7997", 
-			github: "heyharv", 
-			location: "Vallejo"
-		}, 
-		biopic: "images/fry.jpg", 
-		welcomeMessage: "Hi there! My name is Harvey, an enthusiastic front-end developer who wants to help you out!", 
-		skills: ["skill1", "skill2", "skill3", "skill4"]
-	},
-	work: {"jobs": []}, 
-	education: {"schools": []}, 
-	projects: {"projects": []}
-};
-
-var controller = {
-	init: function() {
-		view.init();
-	},
-	display: function() {
-		var formattedName = HTMLheaderName.replace("%data%", bio.name);
-		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-		var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-		var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email); 
-		var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-		var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-		var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-		var formattedFooterPhone = HTMLFootermobile.replace("%data%", bio.contacts.phone);
-		var formattedFooterEmail = HTMLFooteremail.replace("%data%", bio.contacts.email);
-		var formattedFooterGithub = HTMLFootergithub.replace("%data%", bio.contacts.github);
-		var formattedFooterLocation = HTMLFooterLocation.replace("%data%", bio.contacts.location);
-	}
-};
-
-var view = {
-
-}
 
 var bio = {
 	"name": "Harvey Magana", 
@@ -53,7 +11,7 @@ var bio = {
 		"github": "heyharv", 
 		"location": "Vallejo"
 	}, 
-	"biopic": "images/fry.jpg", 
+	"biopic": "images/20150822_173534.jpg", 
 	"welcomeMessage": "Hi there! My name is Harvey, an enthusiastic front-end developer who wants to help you out!",
 	"skills": ["skill1", "skill2", "skill3", "skill4"], 
 	"display": function() {
