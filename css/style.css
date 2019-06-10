@@ -200,3 +200,23 @@ span {
     display: block;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  h1 {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .biopic {
+    display: none;
+  }
+
+  #skills-h3 {
+    display: block;
+  }
+
+  .flex-box {
+    justify-content: end;
+  }
+}
+
