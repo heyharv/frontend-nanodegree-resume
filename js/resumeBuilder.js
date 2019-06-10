@@ -11,7 +11,7 @@ var bio = {
 		"github": "heyharv", 
 		"location": "Vallejo"
 	}, 
-	"biopic": "images/20150822_173534.jpg", 
+	"biopic": "images/mylinkedinimage.jpg", 
 	"welcomeMessage": "Hi there! My name is Harvey, an enthusiastic front-end developer who wants to help you out!",
 	"skills": ["skill1", "skill2", "skill3", "skill4"], 
 	"display": function() {
