@@ -13,7 +13,7 @@ var bio = {
 	}, 
 	"biopic": "images/mylinkedinimage.jpg", 
 	"welcomeMessage": "Hi there! My name is Harvey, an enthusiastic front-end developer who wants to help you out!",
-	"skills": ["skill1", "skill2", "skill3", "skill4"], 
+	"skills": ["HTML", "CSS", "JavaScript", "Responsive Design", "JavaScript and CSS Frameworks", "Version control", "Web Performance", "Browser developer tool testing", "Building and automation tools"], 
 	"display": function() {
 		var formattedName = HTMLheaderName.replace("%data%", bio.name);
 		var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -47,11 +47,18 @@ var bio = {
 var work = {
 	"jobs": [
 		{
+			"employer": "WalkMe, Inc.", 
+			"title": "Software Support", 
+			"location": "San Francisco, CA", 
+			"dates": "Oct. 2018 - June 2019", 
+			"description": "Support and troubleshoot Digital adoption platform"
+		}, 
+		{
 			"employer": "Prezi, Inc.", 
 			"title": "Software Support", 
 			"location": "San Francisco, CA", 
-			"dates": "Aug. 2016 - present", 
-			"description": "Troubleshoot and support users of presentation software"
+			"dates": "Aug. 2016 - June 2018", 
+			"description": "Support and troubleshoot Presentation software"
 		}, 
 		{
 			"employer": "Duda, Inc.", 
@@ -104,9 +111,9 @@ var education = {
 	], 
 	"onlineCourses": [   
 		{
-			"title": "JavaScript Basics", 
+			"title": "Front end nanodegree", 
 			"school": "Udacity", 
-			"dates": "2016", 
+			"dates": "Jan. 2018 - Oct. 2018", 
 			"url": "http://www.udacity.com", 
 		}
 	],
@@ -142,35 +149,40 @@ var education = {
 var projects = {
 	"projects": [
 		{
-			"title": "first project", 
-			"dates": "Jan - 2015", 
-			"description": "Project that was the first one...", 
-			"images": ["images/blueSquare.png"]
+			"title": "React Book App", 
+			"dates": "Jan - 2018", 
+			"description": "Book sorting app that was built with React", 
+			"images": ["images/blueSquare.png"],
+			"url": "https://heyharv.github.io/booktracking-app/"
 		}, 
 		{
 			"title": "second project", 
 			"dates": "Jan - 2015", 
 			"description": "Project that was the second one...", 
-			"images": ["images/yellowSquare.png"]
+			"images": ["images/yellowSquare.png"],
+			"url": "https://heyharv.github.io/booktracking-app/"
 		}, 
 		{
 			"title": "third project", 
 			"dates": "Jan - 2015", 
 			"description": "Project that was the third one...", 
-			"images": ["images/purpleSquare.png"]
+			"images": ["images/purpleSquare.png"],
+			"url": "https://heyharv.github.io/booktracking-app/"
 		}
 	], 
 	"display": function() {
 		for(proj = 0; proj < projects.projects.length; proj++) {
 			$("#projects").append(HTMLprojectStart);
-			var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[proj].title);
+			var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[proj].url).replace("%data%", projects.projects[proj].title);
 			var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[proj].dates);
 			var formattedProjectDesc = HTMLprojectDescription.replace("%data%", projects.projects[proj].description);
 			var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[proj].images);
+			//var formattedProjectUrl = HTMLprojectUrl.replace("%data%", projects.projects[proj].url);
 			$(".project-entry:last").append(formattedProjectTitle);
 			$(".project-entry:last").append(formattedProjectDates);
 			$(".project-entry:last").append(formattedProjectDesc);
-			$(".project-entry:last").append(formattedProjectImage);			
+			$(".project-entry:last").append(formattedProjectImage);	
+			//$(".project-entry:last").append(formattedProjectUrl);			
 		}	
 	}
 };
