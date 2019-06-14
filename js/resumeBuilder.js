@@ -177,39 +177,19 @@ var projects = {
 			var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[proj].dates);
 			var formattedProjectDesc = HTMLprojectDescription.replace("%data%", projects.projects[proj].description);
 			var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[proj].images);
-			//var formattedProjectUrl = HTMLprojectUrl.replace("%data%", projects.projects[proj].url);
 			$(".project-entry:last").append(formattedProjectTitle);
 			$(".project-entry:last").append(formattedProjectDates);
 			$(".project-entry:last").append(formattedProjectDesc);
-			$(".project-entry:last").append(formattedProjectImage);	
-			//$(".project-entry:last").append(formattedProjectUrl);			
+			$(".project-entry:last").append(formattedProjectImage);			
 		}	
 	}
 };
 
-//$("#main").append(internationalizeButton);
 $("#mapDiv").append(googleMap);
 bio.display();
 work.display();
 education.display();
 projects.display();
-
-
-/* this is for the internationalization button, I don't need it, it will work if uncommented...
-function inName(oldName) {
-	oldName = bio.name;
-	oldName.split(' ');
-	firstName = oldName.split(' ')[0];
-	lastName = oldName.split(' ')[1];
-	var newName;
-	$("button").click(function() {
-		newName = firstName + " " + lastName.toUpperCase();
-		formattedName = HTMLheaderName.replace("%data%", newName);
-	});
-	return formattedName;
-}
-inName();
-*/
 
 
 
